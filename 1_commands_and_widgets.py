@@ -3,15 +3,12 @@ st.write("Hello world!!!!")
 st.write("---")
 
 
-
-
-
 ######### Learning Sections #########
 # Display text
 # Display data
 # Display plots
 # Optimize performance
-# Display widgets 
+# Display widgets
 # Display media
 
 
@@ -32,19 +29,18 @@ st.write("---")
 # st.write("---")  # creates a horizontal line, useful to separate the content in the page
 
 
-
 ################################################################################
 ### Display data ###
 ################################################################################
-###### We will generate some data
+# We will generate some data
 
 # my_list = [10,50,409] # Python list
 # my_dict = {'Number':[1,2,3], 'Color': ['Blue', 'Yellow', 'Green']} # python dictionary
 
-##### we will use pandas and numpy to generate a DataFrame. 
-##### For now, think of a DataFrame as a table with columns, rows and data.
+# we will use pandas and numpy to generate a DataFrame.
+# For now, think of a DataFrame as a table with columns, rows and data.
 # import numpy as np
-# import pandas as pd 
+# import pandas as pd
 # np.random.seed(1)
 # df = pd.DataFrame(data={"Col1":np.random.randint(low=-100,high=100,size=10),
 #                         "Col2":np.random.randint(low=25,high=80,size=10)
@@ -61,59 +57,52 @@ st.write("---")
 # st.write('---')
 
 
-
-
-
-
 ################################################################################
 ### Display plots ###
 ################################################################################
 
-##### We will use matplotlib, seaborn and plotly  for data visualization
-##### for now, we just need to understand the plotting capability
-##### the commands and their usability will come clear across the lessons and walkthrough project
-##### we will use a generated DataFrame
+# We will use matplotlib, seaborn and plotly  for data visualization
+# for now, we just need to understand the plotting capability
+# the commands and their usability will come clear across the lessons and walkthrough project
+# we will use a generated DataFrame
 # import numpy as np
-# import pandas as pd 
+# import pandas as pd
 # np.random.seed(1)
 # df = pd.DataFrame(data={"Col1":np.random.randint(low=-100,high=100,size=10),
 #                         "Col2":np.random.randint(low=25,high=80,size=10)
 #                         })
 
-#### and will plot the data
+# and will plot the data
 # import matplotlib.pyplot as plt
-# import seaborn as sns  
+# import seaborn as sns
 # st.write("* Plot with Matplotlib/Seaborn") # we create a figure and plot the data
 # sns.set_style("whitegrid")
 # fig, axes = plt.subplots()
 # sns.scatterplot(data=df, x='Col1', y='Col2', ax=axes)
 # st.pyplot(fig) # When you render a Matplotlib or Seaborn plot, you wil use st.pyplot()
 #                # for example, in a jupyter notebook, we render with plt.show()
-#                # don't worry; we will see that in more detail soon 
+#                # don't worry; we will see that in more detail soon
 # st.write("---")
 
 # st.write("* This example uses Plotly - an interactive data visualization library")
 # import plotly.express as px
 # fig = px.scatter(data_frame=df, x='Col1', y='Col2',width=800,height=400)
 # st.plotly_chart(fig) # When you render a Plotly plot, you wil use st.plotly_chart()
-#                      # in a jupyter notebook, we render with plt.show() 
+#                      # in a jupyter notebook, we render with plt.show()
 # st.write("---")
-
-
-
 
 
 ################################################################################
 ### Optimize performance ###
 ################################################################################
 
-#### Currently, every time you reload the dashboard page so is the script
-#### this may cause a delay in your app, i.e.: you may reload multiple time the same data 
-#### to solve that, you can cache your data by adding a decorator @st.cache in a function that loads your data
-#### in this example, you might not notice the speed difference, but in real applications, this difference is noticeable
+# Currently, every time you reload the dashboard page so is the script
+# this may cause a delay in your app, i.e.: you may reload multiple time the same data
+# to solve that, you can cache your data by adding a decorator @st.cache in a function that loads your data
+# in this example, you might not notice the speed difference, but in real applications, this difference is noticeable
 
 # import numpy as np
-# import pandas as pd 
+# import pandas as pd
 
 # @st.cache
 # def load_your_data():
@@ -127,13 +116,11 @@ st.write("---")
 # st.write(df)
 
 
-
-
 ################################################################################
 ### Display widgets ###
 ################################################################################
 
-##### Feel free to play around with all widgets options
+# Feel free to play around with all widgets options
 # if st.button('Hit me'):  # if you click the button, it is True.
 #     st.write("Oh, you did!")
 # else:
@@ -178,20 +165,18 @@ st.write("---")
 # st.write("---")
 
 
-
-#### You probably noticed there is not much value when you randomly create widgets
-#### The idea is to assign them to a variable, and this variable is used to interact with the application
+# You probably noticed there is not much value when you randomly create widgets
+# The idea is to assign them to a variable, and this variable is used to interact with the application
 # option = st.selectbox(label='Pick one:', options=[1,2,3,'A'], key="2")
 # st.write(f"* I see you selected {option}, and its type is {type(option)}")
 # st.write("---")
 
 
-
-#### you can create 'columns' (or split the row space) and assign multiple items/widgets
-#### you should use st.beta_columns() and inform amount of columns
-#### that will be assigned to individual variables, i.e.: if there were three columns, you would have col1, col2, col3
-#### you will define the content on each variable with the command "with:"
-#### this example prints a list in the first column and display a widget in the second column
+# you can create 'columns' (or split the row space) and assign multiple items/widgets
+# you should use st.beta_columns() and inform amount of columns
+# that will be assigned to individual variables, i.e.: if there were three columns, you would have col1, col2, col3
+# you will define the content on each variable with the command "with:"
+# this example prints a list in the first column and display a widget in the second column
 
 # col1, col2 = st.beta_columns(2)
 # with col1:
@@ -214,7 +199,7 @@ st.write("---")
 # st.write("Some song to bring light to your day")
 # st.audio(data="https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav",
 #         start_time=0)
-# st.write("---")   
+# st.write("---")
 
 # st.write("You probably have seen this video already :)")
 # st.video(data="https://www.youtube.com/watch?v=4jzdvYBA--Q",
